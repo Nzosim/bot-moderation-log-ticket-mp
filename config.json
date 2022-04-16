@@ -1,12 +1,9 @@
 {
-	"token": "OTIxNzUwNTgwMTk4Nzg5MTMw.Yb3dHw.pk5_UHtxOiAb1iqVst6zFEXfZyU",
-    "clientId": "921750580198789130",
-    "guildId": "889149526110248990",
-    "embedColor": "BLACK",
-    "log":"963002895958155324",
-    "categorieTicket":"964968383101693952",
-    "modo":"958423852541681765"
+	"token": "le token de ton bot",
+    "clientId": "l'id du bot",
+    "guildId": "l'id du serveur",
+    "embedColor": "la couleur des embeds (en hexadecimal)",
+    "log":"l'id du channel de log",
+    "categorieTicket":"l'id de la categorie des tickets",
+    "modo":"l'id du roles des moderateurs"
 }
-
-
-
