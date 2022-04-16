@@ -1,10 +1,8 @@
 const fs = require('fs');
 const { Client, Collection } = require('discord.js');
 const config = require('./config.json');
-const client = new Client({ intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_MEMBERS", "GUILD_VOICE_STATES"] }); 
-const { MessageEmbed, MessageActionRow, MessageButton, MessageSelectMenu, MessageAttachment } = require('discord.js') 
+const client = new Client({ intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_MEMBERS", "GUILD_VOICE_STATES", "DIRECT_MESSAGES"], partials: ['CHANNEL'] }); 
 client.commands = new Collection();
-const voiceCollection = new Collection();
 client.login(config.token);
 
 const commandFiles = fs.readdirSync(`./commands`).filter((file) => file.endsWith(".js"));
@@ -33,4 +31,34 @@ client.on('interactionCreate', async interaction => {
 		console.error(error);
 		await interaction.reply({ content: 'Erreur', ephemeral: true });
 	}
+});
+
+// const { modMailClient } = require('reconlx')
+
+// const modMail = new modMailClient({
+// 	client,
+// 	guildId: config.guildId,
+// 	category: config.categorieTicket,
+// 	modmailRole: config.modo,
+
+
+
+const charModMail = require('char-mod-mail');
+
+client.on("ready", () => {
+charModMail.ModMail(client, {
+  guildID: config.guildId,
+  categoryID: config.categorieTicket,
+  staffRole: config.modo,
+  embedColor: config.embedColor,
+  anonymousReply: false,
+  closedTitle: "Ticket fermé",
+  closedMessage: "Un membre du staff a fermé votre ticket",
+  staffOpenedTitle: "Ticket ouvert",
+  staffOpenedMessage: "Un membre a ouvert un ticket",
+  userOpenedTitle: "Ticket ouvert",
+  userOpenedMessage: "Un ticket a été ouvert un membre du staff va vous répondre",
+  wrongEmoji: "❌",
+  rightEmoji: "✅" 
+})
 });
