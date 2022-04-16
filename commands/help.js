@@ -14,8 +14,7 @@ module.exports = {
         .setDescription('Voici la liste des commandes disponibles :\n\n`/ban [utilisateur] [raison]` : bannir un membre\n`/tempban [utilisateur] [temps] [raison]` : bannir un membre temporairement\n'
             +'`/unban [utilisateur]` : unban un membre\n`/warn [utilisateur] [raison]` : avertir un membre\n`/unwarn [utilisateur] [numeroDuWarn]` : enlever un avertissement à un membre\n'
             +'`/checkwarn [utilisateur]` : voir les avertissement d\'un membre\n`/mute [utilisateur] [temps] [raison]` : mute un membre\n`/unmute [utilisateur] [raison]` : unmute un membre\n'
-            +'`/kick [utilisateur] [raison]` : exclure un membre\n\nCommandes configuration :\n`!reglement [reglement]` : créer le reglement du serveur\n`!ticket` : créer le message qui permet d\'ouvrir des tickets\n'
-            +'`!autoRole` : créer le message qui permet de choisir son rôle\n')
+            +'`/kick [utilisateur] [raison]` : exclure un membre')
 
     interaction.reply({ embeds: [embed]})
   },
