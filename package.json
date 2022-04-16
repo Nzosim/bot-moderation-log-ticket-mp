@@ -1,0 +1,33 @@
+{
+  "name": "vinted-discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nzosim/vinted-discord-bot.git"
+  },
+  "author": "Nzosim#0379",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nzosim/vinted-discord-bot/issues"
+  },
+  "homepage": "https://github.com/Nzosim/vinted-discord-bot#readme",
+  "dependencies": {
+    "@discordjs/builders": "^0.12.0",
+    "@discordjs/rest": "^0.3.0",
+    "discord-anti-spam": "^2.7.3",
+    "discord-ghost-transcript": "^1.0.1",
+    "discord.js": "^13.6.0",
+    "fs": "^0.0.1-security",
+    "humanize-duration": "^3.27.1",
+    "jsdom": "^19.0.0",
+    "mongoose": "^6.2.10",
+    "parse-duration": "^1.0.2",
+    "reconlx": "^2.5.6",
+    "vinted-api": "^2.9.0"
+  }
+}
